@@ -38,10 +38,7 @@
     height: 50px;
     text-align: left;
     background-color: rgb(233, 143, 233);
-}
-.checkline:hover{
-    border: floralwhite;
-    background-color:rgb(102, 5, 199) ;
+    cursor: pointer;
 }
 .checkline:nth-child(odd) {
     background-color: rgb(167, 159, 159);
@@ -52,13 +49,21 @@
 .label {
     display: inline-block;
     vertical-align: middle;
-    cursor: pointer;
 }
 .input {
     display: inline-block;
     vertical-align: middle;
 }
-.input:checked + label {
+.input:checked + .label {
     background-color: rgb(223, 149, 186);
     text-decoration: line-through;
+}
+.checkline:active {
+    background-color: gold !important;
+}
+.checkline:hover {
+    background-color: grey;
+    color: honeydew;
+    border-bottom: 3px solid red ;
+    border-top:3px solid red ;
 }

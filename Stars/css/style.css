@@ -6,12 +6,14 @@
     background-image: url(../images/star_noactive.png);
     background-repeat: no-repeat;
 }
-.star:hover {
+.star:hover, .star:hover~.star, .star_input:checked  + .star {
     background-image: url(../images/star_active.png);
 }
-.star_input:checked  + .star {
-    background-image: url(../images/star_active.png);
+.star_input {
+    display: none;
 }
-.star_input:checked ~ .star {
-    background-image: url(../images/star_active.png);
-} 
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
